@@ -1,6 +1,6 @@
 import "./App.css";
-import AppFooter from "../src/components/AppFooter";
-import AppHeader from "../src/components/AppHeader";
+import AppFooter from "./components/AppFooter";
+import AppHeader from "./components/AppHeader";
 
 function App() {
   return (
