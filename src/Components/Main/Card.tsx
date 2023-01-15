@@ -3,7 +3,7 @@ export default function Card(props: any) {
   const card = props.card;
   return (
     <>
-      <div className="flex flex-col xl:flex-column shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <div className="flex flex-col xl:flex-column shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden ">
         <img
           className="object-cover w-full h-48"
           src={card.imageURL}

@@ -23,7 +23,7 @@ export default function AppMain() {
       </div>
       <div>
         <h1>Posts</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-3 mx-auto">
           {data.map((post: any, index: any) => {
             return <Card key={index} card={post}></Card>;
           })}
