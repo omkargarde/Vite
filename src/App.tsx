@@ -1,13 +1,17 @@
 import "./App.css";
-import AppFooter from "./AppFooter";
-import AppHeader from "./AppHeader";
-
+import AppFooter from "./Components/AppFooter";
+import AppHeader from "./Components/AppHeader";
+import AppMain from "./Components/Main/AppMain";
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient({});
 function App() {
   return (
     <>
-      <AppHeader></AppHeader>
-      <h1>bodyqweqw</h1>
-      <AppFooter></AppFooter>
+      <QueryClientProvider client={queryClient}>
+        <AppHeader></AppHeader>
+        <AppMain></AppMain>
+        <AppFooter></AppFooter>
+      </QueryClientProvider>
     </>
   );
 }
