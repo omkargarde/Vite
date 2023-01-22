@@ -3,21 +3,21 @@ export default function Card(props: any) {
   const card = props.card;
   return (
     <>
-      <div className="flex flex-col xl:flex-column shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden ">
+      <div className="xl:flex-column flex w-full flex-col overflow-hidden rounded-lg bg-white shadow hover:shadow-md ">
         <img
-          className="object-cover w-full h-48"
+          className="h-48 w-full object-cover"
           src={card.imageURL}
           alt="Flower and sky"
         />
 
         <div className="relative p-4">
-          <h3 className="text-base md:text-xl font-medium text-gray-800">
+          <h3 className="text-base font-medium text-gray-800 md:text-xl">
             {card.name}
           </h3>
 
-          <p className="mt-4 text-base md:text-lg text-gray-600 flex content-center items-center">
+          <p className="mt-4 flex content-center items-center text-base text-gray-600 md:text-lg">
             <BiRupee /> <span className="">{card.price}</span>
-            <button className="ml-auto px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-200 hover:opacity-80 text-gray-800 text-sm font-medium rounded-md hover:shadow-lg">
+            <button className="ml-auto rounded-md bg-gradient-to-r from-gray-100 to-gray-200 px-4 py-2 text-sm font-medium text-gray-800 hover:opacity-80 hover:shadow-lg">
               Add to cart
             </button>
           </p>

@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useQuery } from "react-query";
 import { getData } from "../endpoints/GetApi";
 import Card from "./Card";
 import Facet from "./Facet";
+import SearchBox from "./shared/SearchBox";
 export default function AppMain() {
   const { data, error, isError, isLoading, refetch } = useQuery(
     // first argument is a string to cache and track the query result
@@ -9,6 +11,7 @@ export default function AppMain() {
     // second argument is query fn,(axios,fetch etc)
     getData
   );
+  const [searchTerm, setSearchTerm] = useState("");
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -22,8 +25,12 @@ export default function AppMain() {
         <Facet></Facet>
       </div>
       <div>
-        <h1>Posts</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-3 mx-auto">
+        {/* lifting stateUp */}
+        <SearchBox
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+        ></SearchBox>
+        <div className="mx-auto grid grid-cols-1 gap-6 px-3 sm:grid-cols-2 lg:grid-cols-5">
           {data.map((post: any, index: any) => {
             return <Card key={index} card={post}></Card>;
           })}
