@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npx http-server ./dist",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && npm build",
     "preview": "vite preview"
   },
   "dependencies": {
