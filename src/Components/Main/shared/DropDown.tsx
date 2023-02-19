@@ -38,7 +38,7 @@ export default function DropDown(props: any) {
   const typeDropDown = (
     <>
       <select
-        className="shadow-outline  my-6 inline-flex h-10 w-full items-center rounded-lg bg-white pl-1  text-sm font-medium text-gray-800 shadow-lg transition-colors duration-150 hover:opacity-80"
+        className="shadow-outline my-6 inline-flex h-10 w-full items-center rounded-lg bg-white pl-1  text-sm font-medium text-gray-800 shadow-lg transition-colors duration-150 hover:opacity-80"
         value={type}
         onChange={(e) => setType(e.target.value)}
       >

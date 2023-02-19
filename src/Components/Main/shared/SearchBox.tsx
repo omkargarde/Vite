@@ -4,9 +4,9 @@ export default function SearchBox(props: any) {
     setSearchTerm(value);
   }
   return (
-    <div className="col-span-2 ">
+    <div className="col-span-1 ">
       <input
-        className="my-6 inline-block w-full rounded-md border-transparent bg-white py-2 text-center text-xl shadow-md hover:border-gray-300"
+        className="my-6  inline-block w-full rounded-md border-transparent bg-white py-2 text-center text-xl shadow-md hover:border-gray-300"
         id="searchBox"
         type="text"
         name="searchBox"
