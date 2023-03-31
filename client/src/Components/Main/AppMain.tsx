@@ -19,16 +19,16 @@ export default function AppMain() {
   const [type, setType] = useState("");
   const [update, setUpdate] = useState(true);
   useEffect(() => {
-    if (searchTerm !== "") {
+    if (searchTerm === "") {
       return;
     }
     setColor("");
     setGender("");
     setType("");
-  }, [searchTerm, color, gender, type]);
+  }, [searchTerm]);
   useEffect(() => {
     setSearchTerm("");
-  }, []);
+  }, [color, gender, type]);
 
   if (isLoading) {
     return <div>Loading...</div>;
