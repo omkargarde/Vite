@@ -1,8 +1,8 @@
+import { useEffect } from "react";
+
 export default function SearchBox(props: any) {
   const setSearchTerm = props.setSearchTerm;
-  function updateValue(value: string) {
-    setSearchTerm(value);
-  }
+
   return (
     <div className="col-span-1 ">
       <input
@@ -13,7 +13,8 @@ export default function SearchBox(props: any) {
         placeholder="Search"
         required={true}
         autoFocus={true}
-        onChange={(event) => updateValue(event.target.value)}
+        value={props.searchTerm}
+        onChange={(event) => setSearchTerm(event.target.value)}
       />
     </div>
     // TODO add when dark mode is needed
